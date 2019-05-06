@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import '~normalize.css/normalize';
+@import 'fonts';
+
+// variable fonts
+$roboto: 'Roboto';
+$din-pro-regular: 'DIN Pro Regular';
+
+
+// variable color
+$color-primary: #222;
+$color-secondary: #4A4556;
+$color-orange: #F47821;
+
+
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1200px ) {
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+
+body {
+    font-family: 'DIN Pro Regular';
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.professional {
+
+    padding: 165px 0;
+    text-align: center;
+    
+    .title {
+        margin: 0 0 24px;
+        font-size: 48px;
+        font-weight: 400;
+        color: $color-primary;
+
+        @media screen and (max-width: 650px ) {
+            font-size: 37px;
+        }
+    }
+
+    .sub-title {
+        margin: 0 0 40px;
+        color: $color-secondary;
+        font-family: $roboto;
+        font-size: 16px;
+
+        .text-orange {
+            color: $color-orange;
+            font-weight: bold;
+        }
+    }
+
+    .link-form {
+        position: relative;
+        color: $color-primary;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        transition: color .5s;
+
+        &:hover {
+            color: $color-orange;
+        }
+        
+        &:before {
+            content: '+';
+            color: $color-orange;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: -10px;
+            left: -25px;
+        }
+    }
+}
+
+.main-img {
+
+    img {
+
+        width: 100%;;
+    }
+}
+
+.list {
+
+    background-color: #F7F5FA;
+    padding-bottom: 50px;
+    
+    .overlay-list {
+        display:flex;
+        flex-wrap: wrap;
+        position: relative;
+        background-color: #fff;
+        width: 970px;
+        margin: -100px auto 0;
+        z-index: 100;
+
+        @media screen and (max-width: 1024px ) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 650px ) {
+            flex-direction: column;
+            margin: -25px auto 0;
+        }
+
+        .item {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 40px;
+            border: 1px solid #EDEDED;
+
+            @media screen and (max-width: 650px ) {
+                width: 100%;
+            }
+
+            .category {
+                text-transform: uppercase;
+                font-size: 12px;
+                color:$color-orange;
+                margin: 0 0 20px;
+                font-weight: bold;
+            }
+
+            .text {
+                font-size: 24px;
+                color:$color-primary;
+                margin: 0;
+
+                @media screen and (max-width: 768px ) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.main-text {
+
+    padding: 100px 0;
+
+    .overlay {
+        padding: 0 200px;
+
+        @media screen and (max-width: 1200px ) {
+            padding: 0 125px;
+        }
+
+        @media screen and (max-width: 1024px ) {
+            padding: 0;
+        }
+
+        .title {
+            font-size: 48px;
+            color: $color-primary;
+            margin: 0 0 30px;
+        }
+    
+        .text {
+            font-size: 16px;
+            color: $color-secondary;
+            margin: 0 0 20px;
+            line-height: 26px;
+        }
+    }
+}
+
+.advantages {
+    background-color: #F7F5FA;
+    padding: 100px 0;
+
+    .list-advantages {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1024px ) {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 345px;
+
+            @media screen and (max-width: 1024px ) {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            img {
+                margin: 0 0 20px;
+            }
+
+            .title {
+                font-size: 20px;
+                color: #000;
+                margin: 0;
+                font-weight: bold;
+            }
+
+            hr {
+                margin: 20px 0;
+                width: 24px;
+                border: 0;
+                border-top: 2px solid $color-orange;
+
+                @media screen and (max-width: 1024px ) {
+                    margin: 20px auto;
+                }
+            }
+
+            .text {
+                font-weight: 500;
+                font-size: 16px;
+                color: $color-secondary;
+                margin: 0;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+.form {
+    padding: 100px 0;
+    background-color: #161616;
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+        font-weight: normal;
+        margin: 0 0 80px;
+
+        @media screen and (max-width: 480px ) {
+            font-size: 30px;
+        }
+    }
+
+    .form-about {
+        width: 600px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 768px ) {
+            width: 100%;
+        } 
+
+        .input-group {
+            position: relative;
+            counter-increment: my-awesome-counter;
+
+            &:before {
+                content: counter(my-awesome-counter) " ";
+                display: block;
+                width: 64px;
+                height: 64px;
+                border: 1px solid rgba(255, 255, 255, .23);
+                border-radius: 50%;
+                color: $color-orange;
+                text-align: center;
+                font-weight: 500;
+                font-size: 20px;
+                font-family: $roboto;
+                position: absolute;
+                left: -100px;
+                top: -20px;
+                line-height: 60px;
+
+                @media screen and (max-width: 768px ) {
+                    font-size: 18px;
+                    position: static;
+                    margin: 0 auto 20px;
+                }
+            }
+            
+            label {
+                font-size: 16px;
+                color: #fff;
+                display: block;
+                margin-bottom: 15px;
+                line-height: 25px;
+            }
+
+            .form-control {
+                font-family: $roboto;
+                width: 100%;
+                background: none;
+                border: none;
+                outline: none;
+                box-sizing: border-box;
+                font-size: 24px;
+                color: #fff;
+                line-height: 20px;
+                border-bottom: 2px solid rgba(247, 248, 250, .1);
+                padding-bottom: 15px;
+            }
+
+            .form-textarea {
+                font-family: $roboto;
+                width: 100%;
+                background: none;
+                border: none;
+                outline: none;
+                box-sizing: border-box;
+                font-size: 24px;
+                color: #fff;
+                line-height: 35px;
+                border-bottom: 2px solid rgba(247, 248, 250, .1);
+                padding-bottom: 15px;
+                resize: none;
+
+                @media screen and (max-width: 480px ) {
+                    height: 175px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+            border-radius: 111px;
+            color: $color-orange;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            padding: 19px 0;
+            transition: all .5s;
+
+            &:hover {
+                background-color: $color-orange;
+                color: #fff;
+            }
+        }
+
+        .error-danger {
+            margin-top: 20px;
+            font-size: 20px;
+            color: red;
+        }
+    }
+}
